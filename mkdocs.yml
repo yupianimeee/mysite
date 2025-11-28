@@ -1,0 +1,116 @@
+site_name: yupianimeee
+site_url: https://yupianimeee.github.io/mysite/
+
+# Конфигурация сайта
+theme:
+  name: material
+  custom_dir: overrides
+  language: ru
+
+  # Логотип и фавикон
+  logo: assets/logo.svg
+  favicon: assets/logo.svg
+
+  # Настройки цветовой схемы
+  palette:
+    # Палитра для светлой темы
+    - scheme: default
+      primary: white
+      accent: teal
+      toggle:
+        icon: material/weather-night
+        name: Переключить на темную тему
+
+    # Палитра для темной темы
+    - scheme: slate
+      primary: black
+      accent: teal
+      toggle:
+        icon: material/weather-sunny
+        name: Переключить на светлую тему
+  
+  # Настройки шрифтов
+  font:
+    text: Inter
+    code: JetBrains Mono
+
+  # Настройки навигации
+  features:
+    - navigation.prune
+    - navigation.indexes
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.path
+    - navigation.sections
+    - navigation.tabs
+    - navigation.tracking
+    - navigation.top
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+
+# Навигация
+nav:
+  - Главная: index.md
+  - Блог: blog/index.md
+
+# Куки
+extra:
+  consent:
+    title: Cookie и Политика конфиденциальности
+    description: >- 
+      Мы используем файлы cookie и рекомендательные технологии. 
+      Пользуясь сайтом, вы соглашаетесь с Политикой обработки персональных данных
+    cookies:
+      analytics: github
+
+copyright: >
+  Copyright &copy; 2025 yupianimeee –
+  <a href="#__consent">Изменить настройки Куки</a>
+
+# Плагины
+plugins:
+  - search:
+      enabled: false
+  - meta
+  - tags
+  - blog:
+      blog_dir: blog/posts
+      blog_toc: true
+      post_date_format: long
+      post_url_format: "{date}/{slug}"
+      post_slugify_separator: _
+      archive: false
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - pymdownx.blocks.caption
+  - pymdownx.details
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - tables
+  - toc:
+      permalink: "#"
+      title: На этой странице
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tabbed:
+      alternate_style: true
+
+# Дополнительные настройки
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/extra.js
+
